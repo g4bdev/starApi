@@ -12,11 +12,17 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
+import { StarMovieComponent } from './star-movie/star-movie.component';
+import { StarCharComponent } from './star-char/star-char.component';
+import { StarPlanetsComponent } from './star-planets/star-planets.component';
 @NgModule({
   declarations: [
     AppComponent,
     StarHomeComponent,
-    StarHeaderComponent
+    StarHeaderComponent,
+    StarMovieComponent,
+    StarCharComponent,
+    StarPlanetsComponent
   ],
   imports: [
     BrowserModule,
