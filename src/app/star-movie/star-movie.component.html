@@ -1,1 +1,28 @@
-<p>star-movie works!</p>
+<ng-template ngFor let-films [ngForOf]="getAllFilms">
+    <a class="films">
+
+        <section class="filme_title mat-elevation-z20">
+            <div class="flex-container" flex>
+
+                <div class="flex-child">
+                    <h1>
+                        {{films.title}}
+                    </h1>
+                </div>
+                <h4>
+                    Release date: {{films.release_date}}
+                </h4>
+
+                <h2>
+                    Director: {{films.director}}
+                </h2>
+
+                <p>
+                    {{films.opening_crawl}}
+                </p>
+
+            </div>
+
+        </section>
+    </a>
+</ng-template>

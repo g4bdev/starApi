@@ -1,14 +1,28 @@
-<mat-card class="char-card">
-    <mat-card-header>
-      <div mat-card-avatar class="img-style"></div>
-      <mat-card-title class="names">Luke Skywalker</mat-card-title> 
-    </mat-card-header>
-    <img mat-card-image src="https://i.pinimg.com/originals/af/36/59/af3659305d11a1201aeab2a267b7942e.png" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    </mat-card>
+<ng-template ngFor let-people [ngForOf]="getAllPeople">
+  <a class="people">
+
+      <section class="filme_title mat-elevation-z20">
+          <div class="flex-container" flex>
+
+              <div class="flex-child">
+                  <h1>
+                     {{people.name}}
+                  </h1>
+              </div>
+              <h4>
+                  Birth year: {{people.birth_year}}
+              </h4>
+
+              <h4>
+                  Gender: {{people.gender}}
+              </h4>
+
+              <h4>
+                  Height: {{people.height}}
+              </h4>
+
+          </div>
+
+      </section>
+  </a>
+</ng-template>

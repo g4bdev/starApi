@@ -1,1 +1,28 @@
-<p>star-planets works!</p>
+<ng-template ngFor let-planets [ngForOf]="getAllPlanets">
+    <a class="planets">
+  
+        <section class="filme_title mat-elevation-z20">
+            <div class="flex-container" flex>
+  
+                <div class="flex-child">
+                    <h1>
+                       {{planets.name}}
+                    </h1>
+                </div>
+                <h4>
+                    Diameter: {{planets.diameter}}
+                </h4>
+  
+                <h4>
+                    Rotation Period: {{planets.rotation_period}}
+                </h4>
+  
+                <h4>
+                    Population: {{planets.population}}
+                </h4>
+  
+            </div>
+  
+        </section>
+    </a>
+  </ng-template>
