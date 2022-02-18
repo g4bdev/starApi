@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeopleApiService } from '../service/people-api.service';
 
 @Component({
   selector: 'app-star-char',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarCharComponent implements OnInit {
 
-  constructor() { }
+  public getAllPeople: any;
+
+  constructor(private peopleApiService : PeopleApiService) { }
 
   ngOnInit(): void {
+    this.peopleApiService.apiListPeople.subscribe(
+      res => {
+        this.getAllPeople = res.results;
+        console.log(this.getAllPeople)}
+    );
   }
 
 }

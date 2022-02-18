@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilmsApiService } from '../service/films-api.service';
 
 @Component({
   selector: 'app-star-movie',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarMovieComponent implements OnInit {
 
-  constructor() { }
+  public getAllFilms: any;
+
+  constructor(private filmsApiService : FilmsApiService) { }
 
   ngOnInit(): void {
+    this.filmsApiService.apiListAllFilms.subscribe(
+      res => {
+        this.getAllFilms = res.results;
+        console.log(this.getAllFilms)}
+    );
   }
 
 }

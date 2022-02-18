@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanetsApiService } from '../service/planets-api.service';
 
 @Component({
   selector: 'app-star-planets',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarPlanetsComponent implements OnInit {
 
-  constructor() { }
+  public getAllPlanets: any;
+
+  constructor(private planetsApiService : PlanetsApiService) { }
 
   ngOnInit(): void {
+    this.planetsApiService.apiListPlanets.subscribe(
+      res => {
+        this.getAllPlanets = res.results;
+        console.log(this.getAllPlanets)}
+    );
   }
-
 }
