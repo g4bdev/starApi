@@ -1,9 +1,29 @@
-.filme_title{
+.characters{
   color: white;
-  background-color: rgb(39, 39, 39);
-  width: 380px;
-  border: 1px solid yellow;
-  padding: 30px;
-  margin: 10px;
-  float:left;
+    font-size: 12px;
+    font-family: Verdana, Tahoma, sans-serif;
+    background-color: rgb(39, 39, 39);
+    border: 1px solid yellow;
+    width: 300px;
+    padding: 30px;
+    margin: 30px;
+    margin-left: 180px;
+    float: left;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.char{
+  font-size: 31px;
 }

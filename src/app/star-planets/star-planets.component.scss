@@ -1,9 +1,25 @@
-.filme_title{
+.planets{
     color: white;
     background-color: rgb(39, 39, 39);
-    width: 380px;
+    width: 300px;
     border: 1px solid yellow;
     padding: 30px;
-    margin: 10px;
+    margin: 30px;
+    margin-left: 180px;
     float:left;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
+//planets divanimation
+@keyframes myAnim {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
